@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 100%;
+    background-image: url('./img/marvel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+.main-text {
+    color: #fff;
+}
+
+.text-info {
+    color: #fff;
+}
+
+.text {
+    padding-left: 20px;
+    color: #fff;
+}
+
+.sort {
+    padding: 10px 20px;
+    margin-left: 50px;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, .25);
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button {
+    padding-right: 20px;
+}
+
+#controls {
+    height: 80px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    opacity: 0;
+    top: 0;
+}
+
+.container {
+    height: calc(100vh - 80px - 60px);
+    overflow: auto;
+    display: flex;
+}
+
+.menu {
+    padding: 0;
+    width: 20%;
+    background-color: #000;
+    opacity: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.menu_ul {
+    padding: 0;
+}
+
+.name-film {
+    padding: 5px;
+    text-align: center;
+}
+
+.name-film:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(241, 240, 240, 0.8);
+}
+
+.menu_list {
+    color: #fff;
+    padding-bottom: 15px;
+    font-size: 18px;
+    list-style: none;
+}
+
+.main {
+    padding-left: 50px;
+    width: 80%;
+    overflow: auto;
+}
+
+.hero-card {
+    margin: 10px;
+    cursor: pointer;
+    width: 300px;
+    height: 350px;
+    position: relative;
+    perspective: 1000px;
+    transition: transform 250ms linear 2s;
+}
+
+.info, .photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.info {
+    transform: rotateY(180deg);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: black;
+    color: blanchedalmond;
+    border-radius: 5px;
+    box-shadow: 0px 0 10px #fff;
+}
+
+.item {
+    display: flex;
+}
+
+.label:first-child {
+    flex-basis: 30%;
+}
+
+.label:last-child {
+    flex-basis: 70%;
+}
+
+.label {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.label::first-letter {
+    text-transform: capitalize
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-photo {
+    display: block;
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-image: url('./loader.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-name {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0px 0px 1px #fff;
+}
+
+.hero-card:hover .photo {
+    transform: rotateY(180deg);
+    transition-property: transform;
+    transition-delay: .5s;
+    transition-timing-function: linear;
+}
+
+.hero-card:hover .info {
+    transform: rotateY(360deg);
+    transition-property: transform;
+    transition-delay: .5s;
+    transition-timing-function: linear;
+}
+
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#hero-select {
+    background-color: #4985FF;
+}
+
+.pagination {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #fff;
+    background-color: rgba(0, 0, 0, .9);
+    opacity: 0;
+}
+
+.paginationInfo {
+    color: #fff;
+    width: 278px;
+    font-size: 11px;
+    align-self: center;
+}
+
+.paginationButtons {
+    overflow: auto;
+    display: flex;
+}
